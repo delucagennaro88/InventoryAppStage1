@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">InventoryAppStage1</string>
+    <string name="plus_item">Aggiungi voce</string>
+    <string name="save">Salva</string>
+    <string name="action_delete">Cancella</string>
+    <string name="item_cat">Prodotti</string>
+    <string name="hint_name">Nome</string>
+    <string name="hint_price">Prezzo</string>
+    <string name="hint_quantity">Quantità</string>
+    <string name="hint_sname">Venditore</string>
+    <string name="hint_phone">Telefono</string>
+</resources>

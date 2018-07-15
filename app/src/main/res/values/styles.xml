@@ -1,0 +1,63 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MainStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/margin</item>
+    </style>
+
+    <style name="AverageStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="SampleStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="ItemStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">@dimen/margin</item>
+    </style>
+
+    <style name="EditorStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="TypeStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/width_zero</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">@dimen/padding_ten</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
+    <style name="FormStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/width_zero</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:paddingLeft">@dimen/padding_four</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="EditStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+</resources>

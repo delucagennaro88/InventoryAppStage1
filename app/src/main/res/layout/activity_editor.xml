@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MainStyle"
+    tools:context=".EditActivity">
+
+    <LinearLayout style="@style/AverageStyle">
+
+        <TextView
+            style="@style/TypeStyle"
+            android:text="@string/item_cat" />
+
+        <LinearLayout style="@style/FormStyle">
+
+            <EditText
+                android:id="@+id/change_name"
+                style="@style/EditStyle"
+                android:hint="@string/hint_name"
+                android:inputType="textCapWords" />
+
+            <EditText
+                android:id="@+id/change_price"
+                style="@style/EditStyle"
+                android:hint="@string/hint_price"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/change_quantity"
+                style="@style/EditStyle"
+                android:hint="@string/hint_quantity"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/change_sname"
+                style="@style/EditStyle"
+                android:hint="@string/hint_sname"
+                android:inputType="textCapWords" />
+
+            <EditText
+                android:id="@+id/change_phone"
+                style="@style/EditStyle"
+                android:hint="@string/hint_phone"
+                android:inputType="number" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
