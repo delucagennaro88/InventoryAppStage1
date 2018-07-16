@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,27 +31,69 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mDbHelper = new DbDeposito(this);
-        showInfo();
-
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        showInfo();
+        displayDatabaseInfo();
     }
 
-    private void showInfo() {
-
-        DbDeposito mDbHelper = new DbDeposito(this);
-
+    private void displayDatabaseInfo() {
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
 
-        Cursor cursor = db.rawQuery("SELECT * FROM " + Prodotto.TABELLA, null);
-        try {
+        String[] projection = {
+                Prodotto._ID,
+                Prodotto.NOME_COLONNA,
+                Prodotto.PREZZO_COLONNA,
+                Prodotto.QUANTITA,
+                Prodotto.VENDITORE,
+                Prodotto.TELEFONO
+        };
+        Cursor cursor = db.query(
+                Prodotto.TABELLA,
+                projection,
+                null,
+                null,
+                null,
+                null,
+                null);
 
-            TextView displayView = (TextView) findViewById(R.id.item_text);
-            displayView.setText("Rows in Database: " + cursor.getCount());
+        TextView displayView = findViewById(R.id.item_text);
+
+        try {
+            displayView.setText("Inventory contains : " + cursor.getCount() + " products.\n\n");
+
+            displayView.append(
+                    Prodotto._ID + " | " +
+                            Prodotto.NOME_COLONNA + " | " +
+                            Prodotto.PREZZO_COLONNA + " | " +
+                            Prodotto.QUANTITA + " | " +
+                            Prodotto.VENDITORE + " | " +
+                            Prodotto.TELEFONO + "\n");
+
+            int idColumnIndex = cursor.getColumnIndex(Prodotto._ID);
+            int nameColumnIndex = cursor.getColumnIndex(Prodotto.NOME_COLONNA);
+            int priceColumnIndex = cursor.getColumnIndex(Prodotto.PREZZO_COLONNA);
+            int quantityColumnIndex = cursor.getColumnIndex(Prodotto.QUANTITA);
+            int supplierNameColumnIndex = cursor.getColumnIndex(Prodotto.VENDITORE);
+            int supplierPhoneColumnIndex = cursor.getColumnIndex(Prodotto.TELEFONO);
+            while (cursor.moveToNext()) {
+                int currentID = cursor.getInt(idColumnIndex);
+                String currentName = cursor.getString(nameColumnIndex);
+                int currentPrice = cursor.getInt(priceColumnIndex);
+                int currentQuantity = cursor.getInt(quantityColumnIndex);
+                String currentSupplierName = cursor.getString(supplierNameColumnIndex);
+                int currentSupplierPhone = cursor.getInt(supplierPhoneColumnIndex);
+
+                displayView.append(("\n" + currentID + " - " +
+                        currentName + " - " +
+                        currentPrice + " - " +
+                        currentQuantity + " - " +
+                        currentSupplierName + " - " +
+                        currentSupplierPhone));
+            }
+
         } finally {
             cursor.close();
         }

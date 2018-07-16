@@ -6,7 +6,8 @@
 
     <TextView
         android:id="@+id/item_text"
-        style="@style/ItemStyle" />
+        style="@style/ItemStyle"
+        tools:text="Inventory view" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

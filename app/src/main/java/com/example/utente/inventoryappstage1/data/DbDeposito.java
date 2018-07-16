@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+
 import com.example.utente.inventoryappstage1.data.Deposito.Prodotto;
 
 public class DbDeposito extends SQLiteOpenHelper {

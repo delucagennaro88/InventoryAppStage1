@@ -9,4 +9,10 @@
     <string name="hint_quantity">Quantità</string>
     <string name="hint_sname">Venditore</string>
     <string name="hint_phone">Telefono</string>
+    <string name="products">prodotti</string>
+    <string name="name">nome</string>
+    <string name="price">prezzo</string>
+    <string name="quantity">quantità</string>
+    <string name="market">rivenditore</string>
+    <string name="phone">telefono</string>
 </resources>

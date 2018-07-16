@@ -18,7 +18,12 @@
         </activity>
         <activity
             android:name=".EditActivity"
-            android:label="@string/plus_item"></activity>
+            android:label="@string/plus_item"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>
