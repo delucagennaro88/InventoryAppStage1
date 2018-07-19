@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/SampleStyle"
+    style="@style/MatchParentStyle"
     tools:context=".MainActivity">
 
+    <ListView
+        android:id="@+id/list"
+        style="@style/MatchParentStyle" />
+
     <TextView
-        android:id="@+id/item_text"
-        style="@style/ItemStyle"
-        tools:text="Inventory view" />
+        android:id="@+id/empty_view"
+        style="@style/WelcomeStyle"
+        android:text="@string/empty_view" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        style="@style/EditorStyle"
-        android:src="@drawable/ic_edit" />
+        android:id="@+id/plus"
+        style="@style/FloatingStyle"
+        android:src="@drawable/add" />
 
 </RelativeLayout>

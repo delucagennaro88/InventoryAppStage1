@@ -1,46 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/MainStyle"
+    style="@style/ActivityEditorStyle"
     tools:context=".EditActivity">
 
-    <LinearLayout style="@style/AverageStyle">
+    <TextView
+        style="@style/ActivityTitleStyle"
+        android:text="@string/editore" />
+
+    <LinearLayout style="@style/ActivityEdStyle1">
 
         <TextView
-            style="@style/TypeStyle"
-            android:text="@string/item_cat" />
+            style="@style/itemTitleStyle"
+            android:text="@string/nome_prodotto" />
 
-        <LinearLayout style="@style/FormStyle">
+        <RelativeLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
 
             <EditText
-                android:id="@+id/change_name"
-                style="@style/EditStyle"
-                android:hint="@string/hint_name"
+                android:id="@+id/edit_name"
+                style="@style/EditableStyle"
+                android:hint="@string/nome_prodotto"
                 android:inputType="textCapWords" />
-
-            <EditText
-                android:id="@+id/change_price"
-                style="@style/EditStyle"
-                android:hint="@string/hint_price"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/change_quantity"
-                style="@style/EditStyle"
-                android:hint="@string/hint_quantity"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/change_sname"
-                style="@style/EditStyle"
-                android:hint="@string/hint_sname"
-                android:inputType="textCapWords" />
-
-            <EditText
-                android:id="@+id/change_phone"
-                style="@style/EditStyle"
-                android:hint="@string/hint_phone"
-                android:inputType="number" />
-        </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
+
+    <LinearLayout style="@style/ActivityEdStyle1">
+
+        <TextView
+            style="@style/itemTitleStyle"
+            android:text="@string/prezzo" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <EditText
+                android:id="@+id/edit_price"
+                style="@style/EditableStyle"
+                android:hint="@string/prezzo"
+                android:inputType="number" />
+
+            <TextView
+                style="@style/MoneyStyle"
+                android:text="@string/moneta" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/ActivityEdStyle1">
+
+        <TextView
+            style="@style/itemTitleStyle"
+            android:text="@string/ammontare" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <EditText
+                android:id="@+id/edit_quantity"
+                style="@style/EditableStyle"
+                android:hint="@string/ammontare"
+                android:inputType="number" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/ActivityEdStyle1">
+
+        <TextView
+            style="@style/itemTitleStyle"
+            android:text="@string/negozio" />
+
+        <Spinner
+            android:id="@+id/select_market"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fortyeight"
+            android:paddingRight="@dimen/sixteen"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/ActivityEdStyle1">
+
+        <TextView
+            style="@style/itemTitleStyle"
+            android:text="@string/market_phone" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <EditText
+                android:id="@+id/edit_phone"
+                style="@style/EditableStyle"
+                android:hint="@string/market_phone"
+                android:inputType="number" />
+        </RelativeLayout>
+    </LinearLayout>
+
 </LinearLayout>

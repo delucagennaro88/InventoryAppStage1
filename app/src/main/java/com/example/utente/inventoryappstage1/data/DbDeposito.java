@@ -4,14 +4,11 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-
-import com.example.utente.inventoryappstage1.data.Deposito.Prodotto;
+import com.example.utente.inventoryappstage1.data.Deposito.DepositoEntry;
 
 public class DbDeposito extends SQLiteOpenHelper {
-    public static final String LOG_TAG = DbDeposito.class.getSimpleName();
 
-    private static final String DATABASE_NAME = "shelter.db";
-
+    private static final String DATABASE_NAME = "inventory.db";
     private static final int DATABASE_VERSION = 1;
 
     public DbDeposito(Context context) {
@@ -21,20 +18,19 @@ public class DbDeposito extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String SQL_CREATE_ITEMS_TABLE = "CREATE TABLE " + Prodotto.TABELLA + " ("
-                + Prodotto._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + Prodotto.NOME_COLONNA + " TEXT NOT NULL, "
-                + Prodotto.PREZZO_COLONNA + " INTEGER NOT NULL, "
-                + Prodotto.QUANTITA + " INTEGER NOT NULL DEFAULT 0, "
-                + Prodotto.VENDITORE + " TEXT NOT NULL, "
-                + Prodotto.TELEFONO + " INTEGER NOT NULL);";
+        String CREATE_TABLE = "CREATE TABLE " + DepositoEntry.TABELLA + " ("
+                + DepositoEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + DepositoEntry.NOME + " TEXT NOT NULL, "
+                + DepositoEntry.PREZZO + " INTEGER NOT NULL, "
+                + DepositoEntry.QUANTITA + " INTEGER NOT NULL, "
+                + DepositoEntry.VENDITORE + " INTEGER NOT NULL DEFAULT 0, "
+                + DepositoEntry.TELEFONO + " INTEGER );";
 
-        db.execSQL(SQL_CREATE_ITEMS_TABLE);
+        db.execSQL(CREATE_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXISTS " + DepositoEntry.TABELLA);
     }
-
 }

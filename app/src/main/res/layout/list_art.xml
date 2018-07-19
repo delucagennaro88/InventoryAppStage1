@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ActivityEditorStyle">
+
+    <LinearLayout style="@style/ListStyle1">
+
+        <LinearLayout style="@style/ListStyle2">
+
+            <TextView
+                android:id="@+id/name_product"
+                style="@style/ListItemText"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="@dimen/ten"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/twentystr"
+                tools:text="nome del prodotto" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/ListStyle2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/product_quantity"
+                style="@style/ListItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                tools:text="quantità" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/ListStyle1">
+
+        <LinearLayout style="@style/ListStyle2">
+
+            <LinearLayout style="@style/ListStyle2">
+
+                <TextView
+                    android:id="@+id/product_price"
+                    style="@style/ListItemText"
+                    android:layout_width="wrap_content"
+                    tools:text="prezzo" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ListStyle2">
+
+                <LinearLayout style="@style/ListStyle1">
+
+                    <LinearLayout style="@style/ListStyle2">
+
+                        <Button
+                            android:id="@+id/sale_button"
+                            style="@style/ListItembuttonstyle"
+                            android:drawableLeft="@drawable/buy"
+                            android:text="Vendi" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ListStyle2"
+                        android:layout_width="@dimen/two"
+                        android:layout_marginLeft="@dimen/five">
+
+                        <Button
+                            android:id="@+id/edit_button"
+                            style="@style/ListItembuttonstyle"
+                            android:drawableLeft="@drawable/edit"
+                            android:text="Cambia" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

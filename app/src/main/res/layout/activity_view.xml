@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ActivityEditorStyle"
+    tools:context=".ViewActivity">
+
+    <TextView
+        style="@style/ActivityTitleStyle"
+        android:text="@string/product_details" />
+
+    <LinearLayout style="@style/ActivityView1">
+
+        <LinearLayout style="@style/ListStyle2">
+
+            <TextView
+                style="@style/ItemTitleStyle"
+                android:text="@string/nome_prodotto" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/ListStyle2">
+
+            <TextView
+                android:id="@+id/nome_prodotto"
+                style="@style/ItemViewStyle" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/ListStyle1">
+
+        <LinearLayout style="@style/ListStyle2">
+
+            <TextView
+                style="@style/ItemTitleStyle"
+                android:text="@string/prezzo" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/ListStyle2">
+
+            <TextView
+                android:id="@+id/prezzo_prodotto"
+                style="@style/ItemViewStyle" />
+
+            <TextView
+                style="@style/MoneyStyle"
+                android:layout_marginLeft="@dimen/sixteen"
+                android:text="@string/moneta" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/ActivityView1">
+
+        <LinearLayout style="@style/ListStyle2">
+
+            <TextView
+                style="@style/ItemTitleStyle"
+                android:text="@string/ammontare" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/ListStyle2">
+
+            <TextView
+                android:id="@+id/quantita_prodotto"
+                style="@style/ItemViewStyle" />
+
+            <LinearLayout
+                style="@style/ListStyle2"
+                android:paddingLeft="@dimen/sixteen">
+
+                <LinearLayout style="@style/ListStyle2">
+
+                    <Button
+                        android:id="@+id/plus_button"
+                        style="@style/LessButtonStyle"
+                        android:text="@string/plus" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ListStyle2">
+
+                    <Button
+                        android:id="@+id/less_button"
+                        style="@style/LessButtonStyle"
+                        android:text="@string/minus" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/ActivityView1">
+
+        <LinearLayout style="@style/ListStyle2">
+
+            <TextView
+                style="@style/ItemTitleStyle"
+                android:text="@string/negozio" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/ListStyle2">
+
+            <TextView
+                android:id="@+id/market_prodotto"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/fortyeight"
+                android:paddingRight="@dimen/sixteen" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/ActivityView1">
+
+        <LinearLayout style="@style/ListStyle2">
+
+            <TextView
+                style="@style/ItemTitleStyle"
+                android:text="@string/market_phone" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/ListStyle2">
+
+            <LinearLayout style="@style/ActivityView1">
+
+                <LinearLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/telefono_prodotto"
+                        style="@style/ItemViewStyle" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ListStyle2">
+
+                    <Button
+                        android:id="@+id/tele_button"
+                        style="@style/CallButtonStyle"
+                        android:drawableLeft="@drawable/phone"
+                        android:focusable="false" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/ActivityView1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/erase_button"
+            style="@style/MainButtonStyle"
+            android:drawableLeft="@drawable/delete"
+            android:text="@string/cancel" />
+    </LinearLayout>
+</LinearLayout>

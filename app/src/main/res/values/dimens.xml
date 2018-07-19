@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin">16dp</dimen>
-    <dimen name="width_zero">0dp</dimen>
-    <dimen name="padding_four">4dp</dimen>
-    <dimen name="text_size">18dp</dimen>
-    <dimen name="padding_ten">10dp</dimen>
+    <!-- activity_inventory -->
+
+    <dimen name="zero">0dp</dimen>
+    <dimen name="two">2dp</dimen>
+    <dimen name="five">5dp</dimen>
+    <dimen name="ten">10dp</dimen>
+    <dimen name="sixteen">16dp</dimen>
+    <dimen name="twenty">20dp</dimen>
+    <dimen name="thirty">30dp</dimen>
+    <dimen name="thirtyfive">35dp</dimen>
+    <dimen name="forty">40dp</dimen>
+    <dimen name="fortyeight">48dp</dimen>
+
+    <dimen name="twelvestr">12sp</dimen>
+    <dimen name="thirteenstr">13sp</dimen>
+    <dimen name="eighteenstr">18sp</dimen>
+    <dimen name="twentystr">20sp</dimen>
 </resources>
